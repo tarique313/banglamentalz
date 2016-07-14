@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -138,7 +140,7 @@ so far Bangla Mentalz come up with some massive hits like AMAKEY DEKHO, FANDE PO
 	<div class="row">
 					<div class="col-md-12 col-xs-12">
 					<h3><span class="glyphicon glyphicon-list"></span> Playlist</h3>
-					<iframe width="100%" height="600" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/24314082&amp;theme_color=000000&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_artwork=false"></iframe>
+					<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/241239027&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
 					</div>
 	</div>
 </div>
@@ -151,7 +153,6 @@ so far Bangla Mentalz come up with some massive hits like AMAKEY DEKHO, FANDE PO
 </div>
 
 </div>
-
 
 
 
@@ -182,7 +183,7 @@ so far Bangla Mentalz come up with some massive hits like AMAKEY DEKHO, FANDE PO
 <!--Blog Events Ends-->
 
 <!--Contact Starts-->
-<div id="contact" class="spacer">
+<!-- <div id="contact" class="spacer">
 <div class="contactform center">
 <h3><span class="glyphicon glyphicon-envelope"></span> Contact</h3>
   <div class="row">
@@ -193,9 +194,71 @@ so far Bangla Mentalz come up with some massive hits like AMAKEY DEKHO, FANDE PO
         <textarea rows="5" placeholder="Message"></textarea>
         <button class="btn btn-warning bgcolor">Send</button>
       </div>
-  </div>
+  </div> -->
+
+<!-- new contact --> 
+
+<div id="contact" class="spacer">
+<div class="contactform center">
+<h3><span class="glyphicon glyphicon-envelope"></span> Contact</h3>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+      <h4>Get in touch or<br><b>Just say Hello!</b></h4>
+        <form class="form-horizontal" role="form" method="post" action="contact.php">
+          <div class="form-group">
+            <label for="name" class="col-sm-2 control-label">Name</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="name" name="name" placeholder="First & Last Name" value="<?php echo htmlspecialchars($_POST['name']); ?>">
+              <?php echo "<p class='text-danger'>$errName</p>";?>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email" class="col-sm-2 control-label">Email</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="<?php echo htmlspecialchars($_POST['email']); ?>">
+              <?php echo "<p class='text-danger'>$errEmail</p>";?>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message" class="col-sm-2 control-label">Message</label>
+            <div class="col-sm-10">
+              <textarea class="form-control" rows="4" name="message"><?php echo htmlspecialchars($_POST['message']);?></textarea>
+              <?php echo "<p class='text-danger'>$errMessage</p>";?>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="human" class="col-sm-2 control-label">2 + 3 = ?</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="human" name="human" placeholder="Your Answer">
+              <?php echo "<p class='text-danger'>$errHuman</p>";?>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-10 col-sm-offset-2">
+              <input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary" onclick="myFunction()">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-10 col-sm-offset-2">
+              <?php echo $result; ?>  
+            </div>
+          </div>
+        </form> 
+      </div>
+    </div>
+  </div>   
+<script>
+function myFunction() {
+    confirm("Thanks for contacting us! We will get in touch soon. ");
+}
+</script>
 
 
+</div>
+
+
+
+<!-- new contact end-->
 <!-- map -->
 <div class="map clearfix">
 <div class="fb-like-box" data-href="https://www.facebook.com/banglamentalz/" data-width="100%" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
